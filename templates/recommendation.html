@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Recommendations
+{% endblock title %}
+
+{% block content %}
+   {% if my_recomendations %}
+     <h1>My Recommendations</h1>
+     <ul>
+        {% for p in my_recomendations %}
+            <li>{{p.user}}</li>
+        {% endfor %}
+     </ul>
+    {% else %}
+     <h1>You Didn't recommend anyone</h1>
+    {% endif %}
+{% endblock content %}
